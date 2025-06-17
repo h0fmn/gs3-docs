@@ -1,0 +1,71 @@
+site_name: GS3-SFP-232-GE User Guide
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - content.code.copy
+    - navigation.instant
+    - navigation.sections
+    - search.highlight
+    - search.suggest
+    - content.metadata
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Serial Commands:
+    - serial connect: serial/connect.md
+    - serial show: serial/show.md
+    - serial delay-crlf: serial/delay.md
+    - serial baudrate: serial/baudrate.md
+    - serial datasize: serial/datasize.md
+    - serial parity <none/odd/even>: serial/parity.md
+    - seiral stopbits <bits>: serial/serial_stopbits.md
+  - Network Commands:
+    - network show: network_commands/network_show.md
+    - network ipv4 <manual/dhcp/disable>: network_commands/network_ipv4.md
+    - network ipv6 <auto/random/manual/linklocal/disable>: network_commands/network_ipv6.md
+    - network port <port>: network_commands/network_port.md
+    - network timeout: network_commands/network_timeout.md
+    - network hostname <hostname>: network_commands/network_hostname.md
+    - network ntp <remote-ntp-addr>: network_commands/network_ntp.md
+    - network syslog <remote-syslog-addr>: network_commands/network_syslog.md
+  - Security Management:
+    - user list: security_management/user_list.md
+    - user add <admin/regular> <username> <password>: security_management/user_add.md
+    - user change <username> <new_password>: security_management/user_change.md
+    - user delete <username>: security_management/user_delete.md
+    - session list: security_management/session_list.md
+    - session kill <sessionId>: security_management/session_kill.md
+    - ssh renewkeys <ecdsa/eddsa/rsa>: security_management/ssh_renewkeys.md
+    - ssh kex-sha1 <enable/disable>: security_management/ssh_kex-sha1.md
+    - acl set <ipv4/ipv6> <ip>: security_management/acl_set.md
+    - acl del <ipv4/ipv6> <listnum>: security_management/acl_del.md
+    - acl list <ipv4/ipv6>: security_management/acl_list.md
+  - Firmware Commands:
+    - firmware version: firmware_commands/firmware_version.md
+    - firmware upgrade: firmware_commands/firmware_upgrade.md
+    - firmware server <set/get>: firmware_commands/firmware_server.md
+    
+    
+
+  - About:
+    - Our Company: About/our_company.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
